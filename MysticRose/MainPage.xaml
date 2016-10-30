@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="MysticRose.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MysticRose"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:win2d="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <win2d:CanvasAnimatedControl Update="CanvasAnimatedControl_Update" Draw="CanvasAnimatedControl_Draw" CreateResources="CanvasAnimatedControl_CreateResources" SizeChanged="CanvasAnimatedControl_SizeChanged" />
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Number Of Segments" Margin="8" HorizontalAlignment="Right" />
+            <Slider x:Name="numSegments" Grid.Row="1" Width="200" Maximum="48" LargeChange="4" Minimum="3" ValueChanged="numSegments_ValueChanged" Value="12"/>
+            <TextBlock Text="Line Width" Margin="8" HorizontalAlignment="Right" />
+            <Slider x:Name="lineThicknessSlider" Grid.Row="1" Width="200" Maximum="8" LargeChange="5" Minimum="1" ValueChanged="lineThickness_ValueChanged" Value="3"/>
+        </StackPanel>
+    </Grid>
+</Page>
