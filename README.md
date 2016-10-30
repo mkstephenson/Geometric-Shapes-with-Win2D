@@ -1,2 +1,2 @@
 # Geometric-Shapes-with-Win2D
-Since school I have been fascinated with the geometric shapes called mystic roses. Here I've created a UWP app which will generate them.
+Since school I have been fascinated with complex geometric shapes. Here I've created UWP apps which will generate some of them.
